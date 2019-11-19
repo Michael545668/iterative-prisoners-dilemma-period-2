@@ -13,7 +13,9 @@ strategy_description = 'How does this strategy decide?'
 def move(my_history, their_history, my_score, their_score):
     ''' Arguments accepted: my_history, their_history are strings.
     my_score, their_score are ints.
-    
+        # First 3 moves will be Collude
+    if len(my_history) <= 3:
+        return 'c'
     Make my move.
     Returns 'c' or 'b'. 
     '''
